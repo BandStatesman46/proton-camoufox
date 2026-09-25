@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "proton-camoufox"
-version = "0.1.0"
+version = "0.1.2"
 description = "Proton Mail browser automation with Camoufox"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -24,6 +24,9 @@ dependencies = [
     "opencv-python>=4.8",
     "Pillow>=9",
 ]
+
+[project.urls]
+Source = "https://github.com/BandStatesman46/proton-camoufox"
 
 [tool.setuptools.packages.find]
 include = ["proton_camoufox*"]

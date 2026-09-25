@@ -13,6 +13,32 @@ py -m camoufox fetch
 
 Для установки из исходного кода используйте `py -m pip install .`. Файл `requirements.txt` содержит зависимости проекта для установки из каталога исходников.
 
+## Быстрый старт
+
+Перед запуском задайте переменные окружения `PROTON_USERNAME` и `PROTON_PASSWORD`. Например, в PowerShell:
+
+```powershell
+$env:PROTON_USERNAME = "example@proton.me"
+$env:PROTON_PASSWORD = "ваш-пароль"
+```
+
+Пример входа и чтения последних писем:
+
+```python
+import os
+
+from proton_camoufox import ProtonMailClient
+
+with ProtonMailClient(
+    username=os.environ["PROTON_USERNAME"],
+    password=os.environ["PROTON_PASSWORD"],
+    headless=False,
+) as client:
+    client.login(allow_manual_verification=True)
+    for message in client.list_messages(limit=10):
+        print(message.subject)
+```
+
 ## Примеры
 
 Примеры находятся в папке `examples/` исходного проекта:
