@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.env
+.env.*
+proton_state.json
+storage_state.json
+proton_debug/
+proton_debug.png
+dont_solved.png
+recovery*.txt
+*recovery*kit*.pdf

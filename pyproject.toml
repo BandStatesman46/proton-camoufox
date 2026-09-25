@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proton-camoufox"
+version = "0.1.0"
+description = "Proton Mail browser automation with Camoufox"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = [
+    "camoufox[geoip]>=0.5,<1",
+    "playwright>=1.50,<2",
+    "numpy>=1.24",
+    "opencv-python>=4.8",
+    "Pillow>=9",
+]
+
+[tool.setuptools.packages.find]
+include = ["proton_camoufox*"]
+exclude = ["tests*"]
